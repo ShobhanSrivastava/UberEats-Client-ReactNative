@@ -1,20 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { View } from 'react-native';
+import { TailwindProvider } from 'tailwindcss-react-native';
+import RestaurantList from './src/components/RestaurantList';
+
+import restaurants from './assets/data/restaurants.json'
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <TailwindProvider>
+      <View className="px-4 flex-1 justify-center items-center">
+        <RestaurantList data={restaurants}/>
+        <StatusBar style="auto" />
+      </View>
+    </TailwindProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

@@ -26,6 +26,9 @@
         "backgroundColor": "#FFFFFF"
       }
     },
+    "packagerOpts": {
+      "sourceExts": ["ts","tsx", "js"]
+    },
     "web": {
       "favicon": "./assets/favicon.png"
     }
